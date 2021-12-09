@@ -41,7 +41,7 @@
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.php">Jeju</a></h1>
+      <h1 class="logo me-auto"><a href="index.html">Jeju</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -302,9 +302,10 @@
                 </p>
               </form>
           </div>
-          <!--<div class="col-lg-4 col-md-6 portfolio-item filter-app">-->
-            <!--댓글기능추가-->
-          <!--  <div id="disqus_thread"></div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+
+            <!--댓글기능추가--><!--
+            <div id="disqus_thread"></div>
               <script>
 
                   (function() { // DON'T EDIT BELOW THIS LINE
@@ -314,13 +315,13 @@
                   (d.head || d.body).appendChild(s);
                   })();
               </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>-->
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>-->
+</div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <?php
             //data에 있는 값을 .,..을 제외하고 순서대로 자동으로 띄워줌.
-             $list = scandir('./data');
+              $list = scandir('./data');
               $i = 0;
               while($i < count($list)){
                 if($list[$i] != '.') {
@@ -333,12 +334,12 @@
              ?>
             <div class="portfolio-wrap">
               <!--<img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">-->
-            <!--  <div class="portfolio-info">
+              <div class="portfolio-info">
                 <h4>Web 3</h4>
                 <p>Web</p>
                 <div class="portfolio-links">
 
-                  <a href="portfolio-details.php" title="More Details"><i class="bx bx-link"></i></a>-->
+                  <a href="portfolio-details.php" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
