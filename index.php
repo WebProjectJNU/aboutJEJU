@@ -41,7 +41,7 @@
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">Jeju</a></h1>
+      <h1 class="logo me-auto"><a href="index.php">Jeju</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -230,12 +230,12 @@
         <!-- ======= Tour3 Section ======= -->
         <section id="tour3" class="tour3">
           <div class="container">
-    
+
             <div class="section-title">
               <h2>주상절리</h2>
               <p>"자연이 부린 마법"</p>
             </div>
-    
+
             <div class="row">
               <div class="col-lg-6 order-1 order-lg-2">
                 <img src="assets/img/jeju/jeju4.jpg" class="img-fluid" alt="">
@@ -258,7 +258,7 @@
                 </p>
               </div>
             </div>
-    
+
           </div>
         </section><!-- End Tour3 Section -->
 
@@ -274,45 +274,71 @@
         <div class="row">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
+              <!--<li data-filter="*" class="filter-active">All</li>-->
               <li data-filter=".filter-app">Write</li>
                 <!--
               <li data-filter=".filter-card">Card</li>
                 -->
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-web">Review</li>
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container">
-
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
 
-          
               <!--사용자가 작성한 내용을 create_process.php파일로 전송-->
-              <form action = "create_process.php" method="post">
-                <p>
-                  <input type="text" name="title" placeholder="Title">
-                </p>
+              <form action = "portfolio-details.php" method="post">
+
+                <div style="margin:5px auto;">
+                  <input type="text" name="title" placeholder="제목">
+                </div>
                 <p>
                   <textarea name="description"
-                  placeholder="Description"></textarea>
+                  placeholder="작성"></textarea>
                 </p>
                 <p>
                   <input type="submit">
                 </p>
               </form>
           </div>
-          
+          <!--<div class="col-lg-4 col-md-6 portfolio-item filter-app">-->
+            <!--댓글기능추가-->
+          <!--  <div id="disqus_thread"></div>
+              <script>
+
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+                  s.src = 'https://aboutjeju.disqus.com/embed.js';
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+              </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>-->
+
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <?php
+            //data에 있는 값을 .,..을 제외하고 순서대로 자동으로 띄워줌.
+             $list = scandir('./data');
+              $i = 0;
+              while($i < count($list)){
+                if($list[$i] != '.') {
+                  if($list[$i] != '..') {
+                    echo "<li><a href=\"portfolio-details.php?title=$list[$i]\">$list[$i]</a></li>\n";
+                  }
+                }
+                $i = $i +1;
+              }
+             ?>
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
+              <!--<img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">-->
+            <!--  <div class="portfolio-info">
                 <h4>Web 3</h4>
                 <p>Web</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+
+                  <a href="portfolio-details.php" title="More Details"><i class="bx bx-link"></i></a>-->
                 </div>
               </div>
             </div>
