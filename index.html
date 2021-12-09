@@ -279,32 +279,13 @@
                 <!--
               <li data-filter=".filter-card">Card</li>
                 -->
-              <li data-filter=".filter-web">Review</li>
+              <!--<li data-filter=".filter-web">Review</li>-->
             </ul>
           </div>
         </div>
 
-        <div class="row portfolio-container">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
 
-              <!--사용자가 작성한 내용을 create_process.php파일로 전송-->
-              <form action = "portfolio-details.php" method="post">
-
-                <div style="margin:5px auto;">
-                  <input type="text" name="title" placeholder="제목">
-                </div>
-                <p>
-                  <textarea name="description"
-                  placeholder="작성"></textarea>
-                </p>
-                <p>
-                  <input type="submit">
-                </p>
-              </form>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-
-            <!--댓글기능추가--><!--
+            <!--댓글기능추가-->
             <div id="disqus_thread"></div>
               <script>
 
@@ -315,13 +296,13 @@
                   (d.head || d.body).appendChild(s);
                   })();
               </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>-->
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-
+<!--
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <?php
             //data에 있는 값을 .,..을 제외하고 순서대로 자동으로 띄워줌.
-              $list = scandir('./data');
+             /*$list = scandir('./data');
               $i = 0;
               while($i < count($list)){
                 if($list[$i] != '.') {
@@ -330,16 +311,16 @@
                   }
                 }
                 $i = $i +1;
-              }
+              }*/
              ?>
             <div class="portfolio-wrap">
               <!--<img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">-->
-              <div class="portfolio-info">
+            <!--  <div class="portfolio-info">
                 <h4>Web 3</h4>
                 <p>Web</p>
                 <div class="portfolio-links">
 
-                  <a href="portfolio-details.php" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="portfolio-details.php" title="More Details"><i class="bx bx-link"></i></a>-->
                 </div>
               </div>
             </div>
